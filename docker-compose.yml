@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: python-api
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=python-deployment
+      - APP_ENV=development
+      - DEBUG=True
+      - HOST=0.0.0.0
+      - PORT=8000
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src:/app/src
+      - ./logs:/app/logs
+      - ./data:/app/data
+    restart: unless-stopped
+
+  # Uncomment if you need PostgreSQL
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: python-postgres
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_DB: app_db
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+  # Uncomment if you need Redis
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: python-redis
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
+
+# volumes:
+#   postgres_data:
+
