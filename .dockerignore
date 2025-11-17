@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# Documentation
+docs/
+*.md
+LICENSE
+
+# Development files
+requirements-dev.txt
+.flake8
+.pylintrc
+mypy.ini
+pytest.ini
+pyproject.toml
+
+# Local data
+data/
+logs/
+*.log
+
+# Environment files (Railway will use its own env vars)
+.env
+.env.*
+
+# Docker
+.dockerignore
+docker-compose.yml
+Dockerfile.dev
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Misc
+Makefile
+setup.py
+

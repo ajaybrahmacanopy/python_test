@@ -109,6 +109,40 @@ black src/ tests/
 flake8 src/ tests/
 ```
 
+## Deployment
+
+### Railway Deployment
+
+This application is configured for easy deployment on Railway.
+
+#### Quick Deploy
+
+1. Install Railway CLI:
+
+```bash
+curl -fsSL https://railway.app/install.sh | sh
+```
+
+2. Login and deploy:
+
+```bash
+railway login
+railway init
+railway up
+```
+
+3. Generate public domain:
+
+```bash
+railway domain
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
+#### Deploy Button
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/yourusername/python-deployment)
+
 ## License
 
 MIT License
