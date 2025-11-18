@@ -50,9 +50,8 @@ EXPOSE $PORT
 # Change working directory to src
 WORKDIR /app/src
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"
+# Railway handles healthchecks via railway.toml, so we don't need Docker HEALTHCHECK
+# Docker HEALTHCHECK would check wrong port since Railway uses dynamic ports
 
 # Run the application - Railway sets PORT env var dynamically
 # Using shell form to allow environment variable expansion
