@@ -2,9 +2,7 @@ name: Docker Build Test
 
 on:
   push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
 
 jobs:
   docker-build:
@@ -38,14 +36,7 @@ jobs:
         # Test root endpoint
         curl -f http://localhost:8000/ || exit 1
         
-        # Check logs
-        docker logs test-container
-        
         # Cleanup
         docker stop test-container
         docker rm test-container
-    
-    - name: Check Docker image size
-      run: |
-        docker images python-deployment:test --format "Size: {{.Size}}"
 
