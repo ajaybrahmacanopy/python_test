@@ -1,5 +1,6 @@
 # Python Application
 
+![Lint](https://github.com/ajaybrahmacanopy/python_test/workflows/Lint%20Code/badge.svg)
 ![Tests](https://github.com/ajaybrahmacanopy/python_test/workflows/Run%20Tests/badge.svg)
 ![Docker Build](https://github.com/ajaybrahmacanopy/python_test/workflows/Docker%20Build%20Test/badge.svg)
 
