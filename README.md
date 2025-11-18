@@ -1,8 +1,13 @@
 # Python Application
 
+![Tests](https://github.com/ajaybrahmacanopy/python_test/workflows/Run%20Tests/badge.svg)
+![Docker Build](https://github.com/ajaybrahmacanopy/python_test/workflows/Docker%20Build%20Test/badge.svg)
+![Deploy](https://github.com/ajaybrahmacanopy/python_test/workflows/Deploy%20to%20Railway/badge.svg)
+![Code Quality](https://github.com/ajaybrahmacanopy/python_test/workflows/Code%20Quality/badge.svg)
+
 ## Project Overview
 
-A well-structured Python application following best practices.
+A well-structured FastAPI application with CI/CD, Docker support, and Railway deployment.
 
 ## Project Structure
 
