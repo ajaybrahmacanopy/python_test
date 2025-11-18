@@ -9,7 +9,7 @@ from loguru import logger
 from dotenv import load_dotenv
 
 from app.core.config import settings
-from app.api import health, example
+from app.api import health
 
 # Load environment variables
 load_dotenv()
@@ -37,7 +37,7 @@ app = FastAPI(
     description="A well-structured FastAPI application",
     version="0.1.0",
     docs_url="/docs",
-    redoc_url="/redoc",
+    redoc_url=None,
     lifespan=lifespan,
 )
 
@@ -52,7 +52,6 @@ app.add_middleware(
 
 # Include routers
 app.include_router(health.router, tags=["Health"])
-app.include_router(example.router, prefix="/api/v1", tags=["Example"])
 
 
 @app.get("/")
@@ -61,7 +60,6 @@ async def root():
     return {
         "message": "Welcome to the API",
         "docs": "/docs",
-        "redoc": "/redoc",
     }
 
 
